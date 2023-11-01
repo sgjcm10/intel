@@ -21,29 +21,10 @@ public:
 	{
 		x = x1; y = y1;
 	}
-	double Dist(Point p);
-	{
-		int w = (x - p.x);
-		int h = (y - p.y);
-		double d = sqrt(w * w + h * h);
-		return d;
-	}
-
+	double Dist(Point p);  //함수의 헤드 부분 function Prototype
 	double Dist(int x1, int y1);
-	{
-		int w = (x - p.x);
-		int h = (y - p.y);
-		double d = sqrt(w * w + h * h);
-		return d;
-	}
-
-	int Area(Point p)
-	{
-		int w = ABS(x - p.x);
-		int h = ABS(y - p.y);
-		int a = w * h;
-		return a;
-	}
+	double Dist(Point p1, Point p2);
+	int Area(Point p);
 };
 
 int main()
@@ -61,9 +42,14 @@ int main()
 	//p1.x = 10; p1.y = 10;
 	//p2.x = 20; p2.y = 30;
 
-	double dist = p1.Dist(p2);
-	printf("두점 p1(%d,%d), p2(%d,%d)의 거리는 %.2f, 면적은 %d 입니다.\r\n", 
-		p1.x, p1.y, p2.x, p2.y, d, p2.Area(p1));
+	double d = p1.Dist(p2);
+	double e = p1.Dist(20, 30);
+	double d1 = p1.Dist(p2);
+	double e1 = p3.Dist(p1, p2);
+	printf("두점 p1(%d,%d), p2(%d,%d)의 거리는 %.2f(%.2f), 면적은 %d 입니다.\r\n", 
+		p1.x, p1.y, p2.x, p2.y, d, e, p2.Area(p1));
+	printf("두점 p1(%d,%d), p2(%d,%d)의 거리는 %.2f(%.2f), 면적은 %d 입니다.\r\n",
+		p1.x, p1.y, p2.x, p2.y, d, e, p2.Area(p1));
 	printf("null argument P3는 p(%d,%d)로 설정되었습니다.", p3.x, p3.y);
 	
 	//std::cout << "안녕하세요. C++의 세계의 오신것을 환영합니다!\n"
