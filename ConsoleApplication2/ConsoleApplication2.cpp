@@ -93,6 +93,11 @@ int main()
         PrintP(r.GETLR());
         PrintP(r.GETUL());
         PrintP(r.GETUR());
+
+        int a, b;
+        a= 10; b = 20;
+        printf("변수 a = %d b = %d\n", a, b);
+        printf("변수 a = %d b = %d\n", a=30, b=43);        
 }
 
 };
