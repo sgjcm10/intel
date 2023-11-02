@@ -95,19 +95,8 @@ int main()
         PrintP(r.GETUR());
 
         int a, b;
-        a= 10; b = 20;
+        //a= 10; b = 20;
         printf("변수 a = %d b = %d\n", a, b);
         printf("변수 a = %d b = %d\n", a=30, b=43);        
 }
 
-};
-
-
-
-
-
-
-int main()
-{
-    printf("Hello World!\n");
-}
